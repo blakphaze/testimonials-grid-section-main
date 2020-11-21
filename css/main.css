@@ -15,17 +15,54 @@
 
 body {
     background-color: hsl(0, 0%, 81%);
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    line-height: 1.5;
+}
+
+img {
+    width: 12%;
+    border-radius: 100%;
+    display: inline-block;
+}
+
+span {
+    position: absolute;
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+span + span {
+    top: 58px;
+    font-weight: normal;
+}
+
+.lead{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1.5em 0;
+}
+
+blockquote {
+    font-weight: 500;
+    font-style: italic;
 }
 
 .flex-item {
+    position: relative;
     padding: 3em;
-    border: 1px solid red;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
+    margin: 2em 1.5em 1.5rem;
 }
 
 .item1 {
+    color: hsl(0, 0%, 81%);
     background-color: hsl(263, 55%, 52%);
+}
+
+.item1 p.lead {
+    color:hsl(0, 0%, 100%);
 }
 
 .item2 {
@@ -34,10 +71,80 @@ body {
 }
 
 .item3 {
-    color: hsl(210, 46%, 95%);
+    background-color: hsl(0, 0%, 100%);
+    color:hsl(217, 19%, 35%);
 }
 
 .item4 {
     background-color: hsl(219, 29%, 14%);
     color:  hsl(0, 0%, 100%);
+}
+
+.item5 {
+    background-color: hsl(0, 0%, 100%);
+    color:hsl(217, 19%, 35%);
+}
+
+@media (min-width:600px) {
+    .container {
+        width: 1200px;
+        max-width: 80%;
+        margin: 0 auto;
+        /* height: 40vh; */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .flex-item {
+        position: relative;
+        padding: 1.5em;
+        border-radius: 8px;
+        margin: 0.5em 0.7em 0.5rem;
+    }
+    img {
+        width: 30px;
+        border-radius: 100%;
+        display: inline-block;
+    }
+
+    span + span {
+        position: absolute;
+        top: 38px;
+    }
+
+    .item1 {
+        /* background-color: hsl(263, 55%, 52%); */
+        background: url(../images/bg-pattern-quotation.svg);
+        background-color: hsl(263, 55%, 52%);
+        background-repeat: no-repeat;
+        background-position: top right;
+        grid-column: 1 / span 2;
+    }
+
+    .item1 img {
+        border: 1px solid hsl(263, 55%, 52%);
+    }
+
+    .item3 {
+        grid-column: 1;
+        grid-row: 2;
+        padding-bottom: 0;
+    }
+
+    .item4 {
+        grid-column: 2 / span 2;
+        grid-row: 2;
+        padding-bottom: 0;
+    }
+
+    .item4 img {
+        border: 1px solid hsl(263, 55%, 52%);
+    }
+
+    .item5 {
+        grid-column: 4;
+        grid-row: 1 /span 2;
+        padding-bottom: 0;
+    }
 }
