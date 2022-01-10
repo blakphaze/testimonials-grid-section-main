@@ -4,7 +4,7 @@
     padding: 0;
 }
 
---root {
+:root {
     --moderate-violet: hsl(263, 55%, 52%);
     --dark-grayish-blue: hsl(217, 19%, 35%);
     --dark-blackish-blue: hsl(219, 29%, 14%);
@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: hsl(0, 0%, 81%);
+    background-color: var(--light-gray);
     font-size: 13px;
     font-family: 'Barlow Semi Condensed', sans-serif;
     line-height: 1.5;
